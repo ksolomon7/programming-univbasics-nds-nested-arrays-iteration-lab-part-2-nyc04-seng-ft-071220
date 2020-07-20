@@ -7,13 +7,13 @@ def find_min_in_nested_arrays(src)
     inner_count=0
     min_number=src[outer_count][0]
     while inner_count<src[outer_count].count do
-      if min_number>src[outer_count][inner_count]
+      if src[outer_count][inner_count]<min_number
         min_number=src[outer_count][inner_count]
         minimum_array.push(min_number)
       end
       inner_count+=1
-
     end
+    minimum_array.push(min_number)
     outer_count+=1
   end
   minimum_array
